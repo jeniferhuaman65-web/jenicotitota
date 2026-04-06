@@ -1,0 +1,377 @@
+/* ================= GLOBAL STYLES ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fffaef;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.section-desc {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    color: #666;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: #fff;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+}
+.nav-left {
+    
+    width: 92px;
+    height: 46px;
+   
+
+}
+.log {
+    width: 92px;
+    height: 46px;
+}
+
+.nav-center a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #111111;
+    transition: 0.3s;
+}
+
+.nav-center a:hover {
+    color: #fc6621;
+}
+
+.btn-primary {
+    background: #f12b2b;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background: #9b0000;
+   
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: rgb(242, 240, 234);
+    font-size: 25px;
+}
+
+.parallax-layer {
+    position: absolute;
+    width: 110%;
+    height: 110%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.1s linear;
+}
+
+.layer-back {
+    background-image: url("img/fond.png");
+    z-index: 1;
+}
+
+
+.layer-middle {
+    background-image: url("img/fond.png");
+    opacity: 0.6;
+    z-index: 2;
+}
+
+.layer-front {
+    background-image: url("img/fond.png");
+    opacity: 0.3;
+    z-index: 3;
+}
+
+.hero-content {
+    display:grid;
+    place-items: center;
+    z-index:4;
+    max-width:80%; 
+    
+}
+
+.hero-content h1{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:4.5rem;
+    margin-bottom: 20px;
+    width:100%;
+    height: auto;
+}
+.hero-content p {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    color: #faf5f0
+}
+
+
+
+
+/* ================= ABOUT ================= */
+#about {
+    padding: 0rem 0rem;
+    justify-content: center;
+    background-color: #fffaef;
+    
+}
+.about h2 {
+    width: 100%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 3rem;
+    background-color: #111111;
+    color: #faf5f0;
+    padding: 1rem 0rem;
+}
+
+.about p {
+
+    margin-top: 1.5rem;
+   
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-img img {
+  margin: 1rem;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.about-box {
+    background: #201f1f;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 1rem;
+}
+
+.about-box h3 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 15px;
+    color: #fffaef;
+}
+.about-box p {
+    color: #f4f2f0;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    color: #fffaef;
+    font-size: 1.2rem;
+}
+
+/* ================= Prendas ================= */
+
+.carousel-section {
+  padding: 0rem 0rem;
+  color: #faf5f0;
+  text-align: center;
+  overflow: hidden;
+  
+}
+
+.carousel-title {
+padding: 1rem 0rem;
+  font-size: 3rem;
+  background-color: #111111;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 280px;        /* ancho del cuadro */
+  aspect-ratio: 9 / 13;     /* 🔥 esto los hace 1x1 */
+  margin: 0 15px;
+ 
+  border-radius: 10px;
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fot {
+    
+    border-radius:1rem;
+    padding: 0.3rem;
+    }
+
+
+.carousel-item:hover {
+  transform: scale(1.05);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fffbf2;
+  border: none;
+  color: rgba(10, 10, 9, 0.974);
+  font-size: 2rem;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.carousel-btn.prev {
+  left: 0;
+}
+
+.carousel-btn.next {
+  right: 0;
+}
+
+.carousel-btn:hover {
+  background: #d6d1ce;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carousel-item {
+    min-width: 250px;
+  }
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #f4f0e7;
+    position: relative;
+    display: flex;
+    padding: 2rem;
+    
+    
+      
+}
+
+.footer-container {
+    display: flex;
+    width: 100%;
+    gap: 15rem;
+    position: center;
+
+}
+
+.footer-center a {
+    display: flex;
+    color: #141414;
+    text-decoration: none;
+    margin-bottom: 10px;
+   
+    margin: 2rem 0rem;
+    
+}
+
+.footer-center a:hover {
+    color: #fff;
+}
+
+.footer-right a {
+    display: grid;
+    margin: 3rem 0rem;
+    color: #171717;
+    font-size: 1.2rem;
+    
+}
+
+/* WhatsApp Floating Button */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    height: 50px;
+    width: 50px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50rem;
+    z-index: 1000;
+    display: grid;
+    place-items: center;
+    text-decoration: none;
+
+}
+
+/* ================= REVEAL ANIMATION ================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 1s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width: 900px){
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-center {
+        display: none;
+    }
+}
